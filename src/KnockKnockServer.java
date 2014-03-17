@@ -35,7 +35,8 @@ import java.io.*;
 public class KnockKnockServer {
     public static void main(String[] args) throws IOException {
         
-        int portNumber = 8000;
+
+        int portNumber = 10001;
 
         try ( 
             ServerSocket serverSocket = new ServerSocket(portNumber);
@@ -49,12 +50,14 @@ public class KnockKnockServer {
             String inputLine, outputLine;
             
             // Initiate conversation with client
-            KnockKnockProtocol kkp = new KnockKnockProtocol();
-            outputLine = kkp.processInput(null);
+//           KnockKnockProtocol kkp = new KnockKnockProtocol();
+//            outputLine = kkp.processInput(null);
+            outputLine = "Hello";
             out.println(outputLine);
 
             while ((inputLine = in.readLine()) != null) {
-                outputLine = kkp.processInput(inputLine);
+//                outputLine = kkp.processInput(inputLine);
+            	outputLine = inputLine;
                 out.println(outputLine);
                 if (outputLine.equals("Bye."))
                     break;

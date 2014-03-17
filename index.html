@@ -31,5 +31,29 @@
         readURL(this);
     });
 </script>
+
+
+<head>
+            <title> Pedir random </title>
+
+            <script type="text/javascript">
+                function operacion(){
+                        var n1 = document.getElementById("num1").value;
+                        var n2 = document.getElementById("num2").value;
+
+                        location.href = "http://localhost:10001" + "?number1=" + n1 + "&number2=" + n2;
+                }
+            </script>
+
+    </head>
+
+    <body>
+            <h1>Inserte dos números </h1>
+            <form id="forma1"> 
+                <input type="text" id="num1"></input>
+                <input type="text" id="num2"></imput>
+                <input type="button" onClick="operacion()" id="enviar" value="enviar"></input>
+            </form>
+    </body>
 </body>
 </html>
