@@ -51,7 +51,11 @@ public class KnockKnockClient {
 
             while ((fromServer = in.readLine()) != null) {
                 System.out.println("Server: " + fromServer);
+<<<<<<< HEAD
                 if (fromServer.equals("bye."))
+=======
+                if (fromServer.equals("Bye."))
+>>>>>>> 984deabe384afe9305e462dc8c9376c0d63e91d6
                     break;
                 
                 fromUser = stdIn.readLine();
